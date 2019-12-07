@@ -9,13 +9,15 @@ head:
 
 그리고 뭔가 문제들이 몇 가지 보이는데 해결 방법을 몰라서 7시간 동안 삽질만 했다.
 
-현재 해결해야할 문제들
+### 현재 해결해야할 문제들
+
 - Category 별로 포스트를 보여주지만, 포스트의 개수가 많아질 경우 스압 발생.
 - 상단 메뉴 선택시 해당 토픽의 최근 포스트를 보여줄 때 포스트 개수 제한 없이 모두 보여주어 스압 발생. (paginator 적용 안되어 있음)
 - 이 페이지를 검색하려고 검색에서 `사이트` 로 검색했는데 결과가 없음.
 - `collection` 을 어떻게 사용하는지 잘 모르겠다.
    - `collection` 을 사용해서 (Math/CSE/Life) 로 대분류를 나눠보려 했는데, 나누면 메인 화면의 최근 포스트에 다른 대분류가 잡히지 않음.
-
+- ~~모바일에서 수식이 지나치게 긴 경우 수식만 튀어나오는 문제~~ (`overflow-x` property 로 해결)
+- Preview Images 설정
 
 [Minimal Mistakes Documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) 은 잘 되어있는 것 같은데, 그냥 내가 theme 을 잘못 고른건가 싶다.
 
