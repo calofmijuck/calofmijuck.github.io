@@ -1,8 +1,6 @@
 ---
-title:  "github.io 사이트 설정"
+title: "github.io 사이트 설정"
 categories: cse web
-head:
-    teaser: /assets/images/page-icon.png
 ---
 
 사이트를 처음으로 설정하려는데 뭔가 어렵다.

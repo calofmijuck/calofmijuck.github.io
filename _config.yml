@@ -159,6 +159,7 @@ include:
   - _posts
   - _life
   - _cse
+  - _math
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
