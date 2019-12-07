@@ -28,7 +28,7 @@ teaser                   : "/assets/images/page-icon.png" # path of fallback tea
 logo                     : "/assets/images/page-icon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+words_per_minute         : 150
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
@@ -108,7 +108,7 @@ analytics:
 # Site Author
 author:
   name             : "이성찬 / Sungchan Yi"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "https://avatars3.githubusercontent.com/u/38686321?s=460&v=4" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "SNUCSE17 / Hi! Nice to meet you!"
   location         : "Seoul, Korea"
   email            : "calofmijuck@snu.ac.kr"
@@ -156,6 +156,9 @@ footer:
 include:
   - .htaccess
   - _pages
+  - _posts
+  - _life
+  - _cse
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -289,3 +292,35 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # life category
+  - scope:
+      path: ""
+      type: life
+    values:
+      layout: single
+      author_profile: true
+      share: true
+  # cse
+  - scope:
+      path: ""
+      type: cse
+    values:
+      layout: single
+      author_profile: true
+      share: true
+
+
+collections:
+  life:
+    output: true
+    permalink: /:collection/:path/
+  # cse:
+  #   output: true
+  #   permalink: /:collection/:path/

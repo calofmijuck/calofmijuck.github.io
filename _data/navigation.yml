@@ -8,5 +8,7 @@ main:
     url: /cse/
   - title: "Life"
     url: /life/
+  - title: "Category"
+    url: /categories/
   - title: "About"
     url: https://calofmijuck.github.io/about/
