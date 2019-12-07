@@ -27,35 +27,35 @@ head:
 
 1. Syntax Highlighting
 
-```c++
-#include <stdio.h>
-using namespace std;
+    ```c++
+    #include <cstdio>
+    using namespace std;
 
-int main() {
-    printf("Hello, github.io!");
-}
-```
-
-```python
-print("Hello, github.io!");
-```
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello, github.io!");
+    int main() {
+        printf("Hello, github.io!");
     }
-}
-```
+    ```
+
+    ```python
+    print("Hello, github.io!");
+    ```
+
+    ```java
+    public class Main {
+        public static void main(String[] args) {
+            System.out.println("Hello, github.io!");
+        }
+    }
+    ```
 
 2. 수식 입력
 
-$$
-\vec{\nabla} \times \vec{F} =
+    $$
+    \vec{\nabla} \times \vec{F} =
             \left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z} \right) \mathbf{i}
-          + \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right) \mathbf{j}
-          + \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \mathbf{k} 
-$$
+            + \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right) \mathbf{j}
+            + \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \mathbf{k} 
+    $$
 
 깔끔해서 마음이 편안해진다.
 
