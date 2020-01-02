@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://calofmijuck.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://calofmijuck.github.io/" rel="alternate" type="text/html" /><updated>2020-01-02T14:10:43+09:00</updated><id>https://calofmijuck.github.io/feed.xml</id><title type="html">Life Log</title><subtitle>My Blog</subtitle><author><name>이성찬 / Sungchan Yi</name><email>calofmijuck@snu.ac.kr</email></author><entry><title type="html">github.io 사이트 설정 - 2</title><link href="https://calofmijuck.github.io/_cse/web/2020-01-02-site-config2/" rel="alternate" type="text/html" title="github.io 사이트 설정 - 2" /><published>2020-01-02T00:00:00+09:00</published><updated>2020-01-02T00:00:00+09:00</updated><id>https://calofmijuck.github.io/_cse/web/site-config2</id><content type="html" xml:base="https://calofmijuck.github.io/_cse/web/2020-01-02-site-config2/">&lt;p&gt;새해를 기념하여 글을 좀 더 열심히 작성하자는 생각에 이 사이트를 다시 방문했다.&lt;br /&gt;
+지난번에 남겨둔 해결해야 할 문제들을 다시 살펴보았고, 해결 할 수 있는 부분은 해결을 시도했다.&lt;/p&gt;
+
+&lt;h3 id=&quot;검색-결과가-발생하지-않는-문제&quot;&gt;검색 결과가 발생하지 않는 문제&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;이 페이지를 검색하려고 검색에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;사이트&lt;/code&gt; 로 검색했는데 결과가 없음.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;왠지 모르겠는데 다시 해보니까 아무 문제 없이 된다.
+그런데 footer 쪽에 있는 related posts 에 들어있는 텍스트도 (즉, 해당 포스트에는 직접적으로 포함되지 않는 내용) 감지 되어 검색 결과에 같이 등장한다. 이게 뭐지?&lt;/p&gt;
+
+&lt;h3 id=&quot;상단-메뉴-별-pagination-적용-문제&quot;&gt;상단 메뉴 별 pagination 적용 문제&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;상단 메뉴 선택시 해당 토픽의 최근 포스트를 보여줄 때 포스트 개수 제한 없이 모두 보여주어 스압 발생. (paginator 적용 안되어 있음)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;사용하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plugin&lt;/code&gt; 중 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-paginate&lt;/code&gt; 를 더 이상 사용하지 않기로 하고, &lt;a href=&quot;https://github.com/sverrirs/jekyll-paginate-v2&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-paginate-v2&lt;/code&gt;&lt;/a&gt; 를 사용하기로 했다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 에 다음과 같은 내용을 추가했다.&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-paginate-v2&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;pagination&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;per_page&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;# 5개씩 보여주기&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;limit&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;sort_field&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;date&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;sort_reverse&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;:title'&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;# 타이틀 형식&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그리고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; 에는 다음 내용을 추가했다.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-paginate-v2&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;당연히 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; 명령어를 한 번 입력해 줘야 하고, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; 을 다음과 같이 변경했다.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: home
+author_profile: true
+pagination:
+    enabled: true
+    per_page: 5
+---
+
+
+{% for post in paginator.posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% if paginator.total_pages &amp;gt; 1 %}
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pagination&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        {% if paginator.previous_page %}
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;ni&quot;&gt;&amp;amp;laquo;&lt;/span&gt; Prev&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+        {% else %}
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt;&lt;span class=&quot;ni&quot;&gt;&amp;amp;laquo;&lt;/span&gt; Prev&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;em&amp;gt;&lt;/span&gt;{{ page }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/em&amp;gt;&lt;/span&gt;
+
+            {% elsif page == 1 %} 
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ '/index.html' | prepend: site.baseurl }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{ page }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+            {% else %}
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.paginate_path | prepend: '/' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{ page }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;     
+            {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Next &lt;span class=&quot;ni&quot;&gt;&amp;amp;raquo;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+        {% else %}
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt;Next &lt;span class=&quot;ni&quot;&gt;&amp;amp;raquo;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+        {% endif %}
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+{% endif %}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;일단 당장은 디자인이 좀 구리다 (…)&lt;br /&gt;
+Bootstrap 이라도 이용해서 다시 고칠 생각을 하고 있다.&lt;/p&gt;
+
+&lt;p&gt;위와 같은 방식을 이용해서 category 별로 저 부분을 다 작성해서 넣어주면 pagination 이 잘 될 것이라고 기대하고 있다.&lt;/p&gt;
+
+&lt;p&gt;또 다른 문제를 하나 발견했는데…&lt;/p&gt;
+
+&lt;h3 id=&quot;category-가-많아지면-url-이-길어지는-문제&quot;&gt;Category 가 많아지면 url 이 길어지는 문제&lt;/h3&gt;
+&lt;p&gt;인지하지 못하고 있었는데, category 를 막 집어넣었더니 카테고리들이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt; 로 분리되어 &lt;strong&gt;전부&lt;/strong&gt; url 에 포함되는 것을 확인할 수 있었다. 일단은 임시 방편으로, permalink 를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:path&lt;/code&gt; 로만 해두었다.&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/:path/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;원하는 것은, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/대분류/:title/&lt;/code&gt; 인데, collection 을 사용하면 될 것 같지만, 아직도 collection 은 잘 모르겠다.&lt;/p&gt;
+
+&lt;p&gt;아니면 태그를 잘 활용하는 것도 방법이 되지 않을까 고민하고 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;todo&quot;&gt;TODO&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;상단의 Category 탭에서는 paginator 를 어떻게 적용해야 할지 전혀 모르겠다. 차라리 tag 를 도입해서 tag 가 같은 문서 끼리만 볼 수 있도록 구현을 하는 것이 방법일 것 같다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_includes&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_layouts&lt;/code&gt; 에 뭐가 굉장히 많다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;liquid&lt;/code&gt; syntax 를 익히고, template 들을 분석해서 사이트를 보다 더 다채롭게 사용할 수 있으면 좋겠다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;추가-내용&quot;&gt;추가 내용&lt;/h3&gt;
+
+&lt;p&gt;변경 사항들을 repo 에 모두 push 했는데, pagination 이 작동하지 않는다. 전체 recent post, CSE 카테고리 recent post 가 전부 보이지 않는다.&lt;/p&gt;</content><author><name>이성찬 / Sungchan Yi</name><email>calofmijuck@snu.ac.kr</email></author><summary type="html">새해를 기념하여 글을 좀 더 열심히 작성하자는 생각에 이 사이트를 다시 방문했다. 지난번에 남겨둔 해결해야 할 문제들을 다시 살펴보았고, 해결 할 수 있는 부분은 해결을 시도했다.</summary></entry><entry><title type="html">자유종(이해조)</title><link href="https://calofmijuck.github.io/_life/books/2019-12-10-jayujong/" rel="alternate" type="text/html" title="자유종(이해조)" /><published>2019-12-10T00:00:00+09:00</published><updated>2019-12-10T00:00:00+09:00</updated><id>https://calofmijuck.github.io/_life/books/jayujong</id><content type="html" xml:base="https://calofmijuck.github.io/_life/books/2019-12-10-jayujong/">&lt;h2 id=&quot;자유종&quot;&gt;자유종&lt;/h2&gt;
+
+&lt;p&gt;제목: 자유종&lt;br /&gt;
+작가: 이해조&lt;br /&gt;
+갈래: 신소설, 토론 소설, 정치 소설&lt;br /&gt;
+성격: 계몽적, 현실 비판적&lt;br /&gt;
+시점: 전지적 작가 시점&lt;br /&gt;
+시간적 배경: 1908년 음력 1월, 이매경 부인의 생일 저녁부터 새벽까지&lt;br /&gt;
+공간적 배경: 이매경 부인의 집&lt;br /&gt;
+주제: 바람직한 민족과 국가의 방향 제시&lt;br /&gt;
+(출처: zum 학습백과 - &lt;a href=&quot;http://study.zum.com/book/11521&quot;&gt;자유종&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h2 id=&quot;작품-설명&quot;&gt;작품 설명&lt;/h2&gt;
+
+&lt;p&gt;1910년 &lt;광학서포&gt;에서 간행된 신소설로 개화기의 시사토론체 작품들 중 가장 직접적으로 현실 문제를 다룬 정치성이 매우 강한 작품이다. 하룻밤 사이에 전개되는 사건으로 거의 대화로만 일관되어 있고, 내용이 정치적 토론의 연속이므로 토론회 기록문의 느낌을 준다.&lt;/광학서포&gt;&lt;/p&gt;
+
+&lt;p&gt;내용은 1908년 음력 정월 16일 이매경 부인의 생일에 초대받은 신설헌, 홍국란, 강금운 등 몇몇 부인들이 한 자리에 모여 민족, 국가, 사회, 교육, 학문, 종교 등에 관하여 밤새도록 토론을 하고서 제각기 꿈을 이야기하는 것이다. 이 토론에 직접 참여하는 인물은 위에 언급한 네 명의 부인에 국한되어 있고, 나머지 부인들은 모두 청중이 되어 있다. 작가가 서술한 지문은 처음과 끝의 몇 줄에 국한되었고 그 밖에는 네 부인의 대화의 연속이다.&lt;/p&gt;
+
+&lt;p&gt;주제는 여권신장, 교육을 통한 계몽과 개화, 자주독립과 부국번영, 미신과 계급 및 지방색 타파 등으로 봉건 제도에 비판을 가한 정치적 개혁의식이 뚜렷한 작품이다.&lt;/p&gt;
+
+&lt;p&gt;(출처: 우리소설탐구1, 임경순 저)&lt;/p&gt;
+
+&lt;h2 id=&quot;감상&quot;&gt;감상&lt;/h2&gt;
+
+&lt;p&gt;나는 한국인이지만 생각보다 한글을 잘 모르는 것 같다. 한자 공부를 다시 해야겠다는 생각이 든다.
+더불어 옛날 문헌이나, 역사적인 인물의 예화를 들어 비유적으로 설명하는 부분이 많았는데, 작품의 이해를 크게 해치지는 않은 것 같다. 대신 교양을 위해 역사도 좀 알아두면 좋지 않을까 하는 생각은 든다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;관공립은 화욕학교라 실상은 없고 문구뿐이요, 각처 사립은 단명학교라 기본이 없어 번차례로 폐지할 뿐 아니라, 무론 아무 학교든지 그 중에 열심한다는 교장이니 찬성장이니 하는 임원더러 묻되, 이 학교에 제갈량과 이순신과 비사맥과 격란사돈 같은 인재를 교육하여 일후의 국가대사를 경륜하려오 하면 열에 한둘도 없고, 또 묻되 이 학교에 인재 성취는 이 다음 일이요, 교육사회에 명예나 취하려오 하면 열에 칠팔이 더 되니 그 성의가 그러하고야 어찌 장구히 유지하겠소? 교원・강사도 한만(閑漫)한 출입을 아니하고 시간을 지키어 왕래한다니 그 열심은 거룩하오. 공익을 위함인지, 명예를 위함인지, 월급을 위함인지, 명예도 아니요, 월급도 아니요, 실로 공익만 위한다 하는 자, 몇이나 되겠소?&lt;/p&gt;
+
+  &lt;p&gt;무론 공사관립하고 여러 학생들에게 묻되, 학문을 힘써 일후에 사환(仕宦)을 하든지 일신쾌락을 희망하느냐, 국가에 몸을 바치는 정신 얻기를 주의하느냐 하게 되면, 대중소 학교 몇만 명 학도 중에 국가정신이라고 대답하는 자 몇몇이나 되겠소?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;옛날에는 열심히 공부 하고 능력을 키워서 기술을 개발해 세상에 기여하자는 생각을 많이 했었다. 그런데 어떻게 된 일인지 살면 살수록 인류에 기여하려는 마음은 사라져갔고, 나 하나 챙기기 위해 더 힘쓰는 것 같다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;To know even one life has breathed easier&lt;br /&gt;
+Because you have lived.&lt;br /&gt;
+This is to have succeeded.&lt;br /&gt;
+- Ralph Waldo Emerson&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;중학생 때 읽은 책에서 발견한 &lt;strong&gt;성공&lt;/strong&gt;에 관한 문구인데, 아직도 누군가 나에게 &lt;em&gt;성공이란 무엇인가?&lt;/em&gt; 라고 물으면 저렇게 대답해준다. &lt;strong&gt;단 한 명이라도, 삶이 편해진다면 그것이 진정한 성공&lt;/strong&gt;이라는 말이다.&lt;/p&gt;
+
+&lt;p&gt;어떻게 하면 진정한 성공을 이뤄낼 수 있을지는… 공부를 더 한 미래의 내가 답을 해줄 것이다.&lt;/p&gt;</content><author><name>이성찬 / Sungchan Yi</name><email>calofmijuck@snu.ac.kr</email></author><summary type="html">자유종</summary></entry><entry><title type="html">github.io 사이트 설정</title><link href="https://calofmijuck.github.io/_cse/web/2019-12-07-site-config/" rel="alternate" type="text/html" title="github.io 사이트 설정" /><published>2019-12-07T00:00:00+09:00</published><updated>2019-12-07T00:00:00+09:00</updated><id>https://calofmijuck.github.io/_cse/web/site-config</id><content type="html" xml:base="https://calofmijuck.github.io/_cse/web/2019-12-07-site-config/">&lt;p&gt;사이트를 처음으로 설정하려는데 뭔가 어렵다.&lt;/p&gt;
+
+&lt;p&gt;그리고 뭔가 문제들이 몇 가지 보이는데 해결 방법을 몰라서 7시간 동안 삽질만 했다.&lt;/p&gt;
+
+&lt;h3 id=&quot;현재-해결해야할-문제들&quot;&gt;현재 해결해야할 문제들&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Category 별로 포스트를 보여주지만, 포스트의 개수가 많아질 경우 스압 발생.&lt;/li&gt;
+  &lt;li&gt;상단 메뉴 선택시 해당 토픽의 최근 포스트를 보여줄 때 포스트 개수 제한 없이 모두 보여주어 스압 발생. (paginator 적용 안되어 있음)&lt;/li&gt;
+  &lt;li&gt;이 페이지를 검색하려고 검색에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;사이트&lt;/code&gt; 로 검색했는데 결과가 없음.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;collection&lt;/code&gt; 을 어떻게 사용하는지 잘 모르겠다.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;collection&lt;/code&gt; 을 사용해서 (Math/CSE/Life) 로 대분류를 나눠보려 했는데, 나누면 메인 화면의 최근 포스트에 다른 대분류가 잡히지 않음.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;del&gt;모바일에서 수식이 지나치게 긴 경우 수식만 튀어나오는 문제&lt;/del&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;overflow-x&lt;/code&gt; property 로 해결)&lt;/li&gt;
+  &lt;li&gt;Preview Images 설정&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/&quot;&gt;Minimal Mistakes Documentation&lt;/a&gt; 은 잘 되어있는 것 같은데, 그냥 내가 theme 을 잘못 고른건가 싶다.&lt;/p&gt;
+
+&lt;h3 id=&quot;지원되는-기능&quot;&gt;지원되는 기능&lt;/h3&gt;
+
+&lt;p&gt;일단 마크다운이기 때문에 기본적으로 될 것들은 다 되고… 그냥 심심하니 몇개 적어본다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Syntax Highlighting&lt;/p&gt;
+
+    &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;cp&quot;&gt;#include &amp;lt;cstdio&amp;gt;
+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+ &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, github.io!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, github.io!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, github.io!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;수식 입력&lt;/p&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{\nabla} \times \vec{F} =
+         \left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z} \right) \mathbf{i}
+         + \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right) \mathbf{j}
+         + \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \mathbf{k}&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;깔끔해서 마음이 편안해진다.&lt;/p&gt;
+
+&lt;p&gt;정리하자면 전체적으로 괜찮은 것 같긴 한데, &lt;strong&gt;스압&lt;/strong&gt;이 가장 걱정된다. 느려지는 건 정말 원하지 않는다. (+ 모바일 데이터 폭탄 &lt;del&gt;무제한 쓰세요&lt;/del&gt;)&lt;/p&gt;
+
+&lt;p&gt;스압만 해결하면 적당히 쓸만한 사이트가 되지 않을까 싶다. 스압을 해결하려면 결국엔 이 테마에서 정의된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;layout&lt;/code&gt; 들을 분석해야 할 것 같은데 Jekyll 로 되어있으니 Documentation 도 읽고 등등… 삽질 좀 더 해야 하나보다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;더 편하게 코딩하자고 하는 삽질인데 그 과정이 무척 고통스러운 건 CSE 특징인 것 같다 …&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;남은 문제들은 미래의 나에게 맡긴다.&lt;/p&gt;</content><author><name>이성찬 / Sungchan Yi</name><email>calofmijuck@snu.ac.kr</email></author><summary type="html">사이트를 처음으로 설정하려는데 뭔가 어렵다.</summary></entry><entry><title type="html">수포자 양성</title><link href="https://calofmijuck.github.io/_math/teach/2019-12-06-devil/" rel="alternate" type="text/html" title="수포자 양성" /><published>2019-12-06T11:30:00+09:00</published><updated>2019-12-06T11:30:00+09:00</updated><id>https://calofmijuck.github.io/_math/teach/devil</id><content type="html" xml:base="https://calofmijuck.github.io/_math/teach/2019-12-06-devil/">&lt;p&gt;자료를 만들다가 나쁜 생각이 들어서 (…) 중1 학생에게 다음과 같은 문제를 선물하기로 했다.&lt;/p&gt;
+
+&lt;h3 id=&quot;군론&quot;&gt;군론&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/calofmijuck/calofmijuck.github.io/blob/master/_posts/_math/images/191206-1.png?raw=true&quot; alt=&quot;문제 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;군(group)에 대한 문제이다. 현재 교육과정에서는 이항연산, 항등원, 역원의 내용이 전부 빠져있음에도 출제했다…&lt;/p&gt;
+
+&lt;p&gt;(1)번 에서는 더한 후 나머지를 취하는 연산 &lt;script type=&quot;math/tex&quot;&gt;+_p&lt;/script&gt; 을 주고 집합 &lt;script type=&quot;math/tex&quot;&gt;\mathbb{Z}_p&lt;/script&gt; 가 군이 됨을 보여야 한다.&lt;/p&gt;
+
+&lt;p&gt;(2)번은 cyclic group 에 관한 내용이다. &lt;script type=&quot;math/tex&quot;&gt;0\neq a\in \mathbb{Z}_p&lt;/script&gt; 만을 이용해서 &lt;script type=&quot;math/tex&quot;&gt;\mathbb{Z}_p&lt;/script&gt; 를 생성할 수 있음을 보여야 한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;해석학&quot;&gt;해석학&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/calofmijuck/calofmijuck.github.io/blob/master/_posts/_math/images/191206-2.png?raw=true&quot; alt=&quot;문제 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;전에 &lt;script type=&quot;math/tex&quot;&gt;\sqrt{2}&lt;/script&gt; 가 무리수인 것에 대해서 얘기한 적이 있었는데, 내가 &lt;script type=&quot;math/tex&quot;&gt;\sqrt{2}&lt;/script&gt; 의 존재성에 대해 고민해 보라고 한 적이 있다. 물론 실수의 완비성이 필요하긴 한데 &lt;script type=&quot;math/tex&quot;&gt;\sup&lt;/script&gt; 가 대충 존재한다고 하고…&lt;/p&gt;
+
+&lt;h3 id=&quot;선형대수학&quot;&gt;선형대수학&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/calofmijuck/calofmijuck.github.io/blob/master/_posts/_math/images/191206-3.png?raw=true&quot; alt=&quot;문제 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;내적공간(Inner Product Space)에 관한 문제이다. (A), (B), (D) 는 &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}^n&lt;/script&gt;-공간에서 (C) 로 정의된 dot product 가 만족해야 할 조건들이다. (D) 를 이용해 코시-슈바르츠 부등식을 증명하는 것이 핵심이다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;이런 문제를 갖다주면 흥미롭게 풀긴 하지만,&lt;/p&gt;
+
+&lt;p&gt;혹시나 나 때문에 수학 포기하지 않길 바란다 …&lt;/p&gt;</content><author><name>이성찬 / Sungchan Yi</name><email>calofmijuck@snu.ac.kr</email></author><summary type="html">자료를 만들다가 나쁜 생각이 들어서 (…) 중1 학생에게 다음과 같은 문제를 선물하기로 했다.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="https://calofmijuck.github.io/2019-12-06-welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-12-06T08:37:45+09:00</published><updated>2019-12-06T08:37:45+09:00</updated><id>https://calofmijuck.github.io/welcome-to-jekyll</id><content type="html" xml:base="https://calofmijuck.github.io/2019-12-06-welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>이성찬 / Sungchan Yi</name><email>calofmijuck@snu.ac.kr</email></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">산업기능요원 편입</title><link href="https://calofmijuck.github.io/_life/military/2019-11-14-military/" rel="alternate" type="text/html" title="산업기능요원 편입" /><published>2019-11-14T00:00:00+09:00</published><updated>2019-11-14T00:00:00+09:00</updated><id>https://calofmijuck.github.io/_life/military/military</id><content type="html" xml:base="https://calofmijuck.github.io/_life/military/2019-11-14-military/">&lt;p&gt;산업기능요원으로 편입했습니다.&lt;/p&gt;
+
+&lt;p&gt;복무기간은 2019/11/14 ~ 2022/9/13 입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://zxcvber.com/count&quot;&gt;Countdown&lt;/a&gt; 에서 남은 기간을 확인할 수 있습니다.&lt;/p&gt;</content><author><name>이성찬 / Sungchan Yi</name><email>calofmijuck@snu.ac.kr</email></author><summary type="html">산업기능요원으로 편입했습니다.</summary></entry></feed>

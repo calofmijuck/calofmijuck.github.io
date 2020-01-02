@@ -107,3 +107,8 @@ permalink: /:path/
 
 - 상단의 Category 탭에서는 paginator 를 어떻게 적용해야 할지 전혀 모르겠다. 차라리 tag 를 도입해서 tag 가 같은 문서 끼리만 볼 수 있도록 구현을 하는 것이 방법일 것 같다.
 - `_includes`, `_layouts` 에 뭐가 굉장히 많다. `liquid` syntax 를 익히고, template 들을 분석해서 사이트를 보다 더 다채롭게 사용할 수 있으면 좋겠다.
+
+
+### 추가 내용
+
+변경 사항들을 repo 에 모두 push 했는데, pagination 이 작동하지 않는다. 전체 recent post, CSE 카테고리 recent post 가 전부 보이지 않는다.

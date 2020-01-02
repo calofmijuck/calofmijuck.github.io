@@ -1,0 +1,656 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.17.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>수포자 양성 - Life Log</title>
+<meta name="description" content="자료를 만들다가 나쁜 생각이 들어서 (…) 중1 학생에게 다음과 같은 문제를 선물하기로 했다.">
+
+
+  <meta name="author" content="이성찬 / Sungchan Yi">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Life Log">
+<meta property="og:title" content="수포자 양성">
+<meta property="og:url" content="https://calofmijuck.github.io/_math/teach/2019-12-06-devil/">
+
+
+  <meta property="og:description" content="자료를 만들다가 나쁜 생각이 들어서 (…) 중1 학생에게 다음과 같은 문제를 선물하기로 했다.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-12-06T11:30:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://calofmijuck.github.io/_math/teach/2019-12-06-devil/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Sungchan Yi",
+      "url": "https://calofmijuck.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Life Log Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG"></script>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700|Open+Sans:400,700&display=swap&subset=korean"
+    rel="stylesheet">
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="icon" href="https://math.zxcvber.com/images/page-icon.png">
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/page-icon.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          Life Log
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/math/" >Math</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cse/" >CSE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/life/" >Life</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/" >Category</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://calofmijuck.github.io/about/" >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="https://avatars3.githubusercontent.com/u/38686321?s=460&v=4" alt="이성찬 / Sungchan Yi" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">이성찬 / Sungchan Yi</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>SNUCSE17 / Hi! Nice to meet you!</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://zxcvber.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://facebook.com/sungchan1012" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+          
+        
+          
+            <li><a href="https://github.com/calofmijuck" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="https://instagram.com/calofmijuck" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:calofmijuck@snu.ac.kr">
+            <meta itemprop="email" content="calofmijuck@snu.ac.kr" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> 이메일
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="수포자 양성">
+    <meta itemprop="description" content="자료를 만들다가 나쁜 생각이 들어서 (…) 중1 학생에게 다음과 같은 문제를 선물하기로 했다.">
+    <meta itemprop="datePublished" content="December 06, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">수포자 양성
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>자료를 만들다가 나쁜 생각이 들어서 (…) 중1 학생에게 다음과 같은 문제를 선물하기로 했다.</p>
+
+<h3 id="군론">군론</h3>
+
+<p><img src="https://github.com/calofmijuck/calofmijuck.github.io/blob/master/_posts/_math/images/191206-1.png?raw=true" alt="문제 1" /></p>
+
+<p>군(group)에 대한 문제이다. 현재 교육과정에서는 이항연산, 항등원, 역원의 내용이 전부 빠져있음에도 출제했다…</p>
+
+<p>(1)번 에서는 더한 후 나머지를 취하는 연산 <script type="math/tex">+_p</script> 을 주고 집합 <script type="math/tex">\mathbb{Z}_p</script> 가 군이 됨을 보여야 한다.</p>
+
+<p>(2)번은 cyclic group 에 관한 내용이다. <script type="math/tex">0\neq a\in \mathbb{Z}_p</script> 만을 이용해서 <script type="math/tex">\mathbb{Z}_p</script> 를 생성할 수 있음을 보여야 한다.</p>
+
+<h3 id="해석학">해석학</h3>
+
+<p><img src="https://github.com/calofmijuck/calofmijuck.github.io/blob/master/_posts/_math/images/191206-2.png?raw=true" alt="문제 2" /></p>
+
+<p>전에 <script type="math/tex">\sqrt{2}</script> 가 무리수인 것에 대해서 얘기한 적이 있었는데, 내가 <script type="math/tex">\sqrt{2}</script> 의 존재성에 대해 고민해 보라고 한 적이 있다. 물론 실수의 완비성이 필요하긴 한데 <script type="math/tex">\sup</script> 가 대충 존재한다고 하고…</p>
+
+<h3 id="선형대수학">선형대수학</h3>
+<p><img src="https://github.com/calofmijuck/calofmijuck.github.io/blob/master/_posts/_math/images/191206-3.png?raw=true" alt="문제 3" /></p>
+
+<p>내적공간(Inner Product Space)에 관한 문제이다. (A), (B), (D) 는 <script type="math/tex">\mathbb{R}^n</script>-공간에서 (C) 로 정의된 dot product 가 만족해야 할 조건들이다. (D) 를 이용해 코시-슈바르츠 부등식을 증명하는 것이 핵심이다.</p>
+
+<hr />
+
+<p>이런 문제를 갖다주면 흥미롭게 풀긴 하지만,</p>
+
+<p>혹시나 나 때문에 수학 포기하지 않길 바란다 …</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#math" class="page__taxonomy-item" rel="tag">math</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#teach" class="page__taxonomy-item" rel="tag">teach</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2019-12-06T11:30:00+09:00">December 06, 2019</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%EC%88%98%ED%8F%AC%EC%9E%90+%EC%96%91%EC%84%B1%20https%3A%2F%2Fcalofmijuck.github.io%2F_math%2Fteach%2F2019-12-06-devil%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcalofmijuck.github.io%2F_math%2Fteach%2F2019-12-06-devil%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fcalofmijuck.github.io%2F_math%2Fteach%2F2019-12-06-devil%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/2019-12-06-welcome-to-jekyll/" class="pagination--pager" title="Welcome to Jekyll!
+">이전</a>
+    
+    
+      <a href="/_cse/web/2019-12-07-site-config/" class="pagination--pager" title="github.io 사이트 설정
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">관련 포스트</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/page-icon.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/_cse/web/2020-01-02-site-config2/" rel="permalink">github.io 사이트 설정 - 2
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">새해를 기념하여 글을 좀 더 열심히 작성하자는 생각에 이 사이트를 다시 방문했다.
+지난번에 남겨둔 해결해야 할 문제들을 다시 살펴보았고, 해결 할 수 있는 부분은 해결을 시도했다.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/page-icon.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/_life/books/2019-12-10-jayujong/" rel="permalink">자유종(이해조)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">자유종
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/page-icon.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/_cse/web/2019-12-07-site-config/" rel="permalink">github.io 사이트 설정
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">사이트를 처음으로 설정하려는데 뭔가 어렵다.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/page-icon.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2019-12-06-welcome-to-jekyll/" rel="permalink">Welcome to Jekyll!
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    <li><strong>팔로우:</strong></li>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <li><a
+        href="/feed.xml"><i
+          class="fas fa-fw fa-rss-square" aria-hidden="true"></i>
+        피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Sungchan Yi.</div>
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
