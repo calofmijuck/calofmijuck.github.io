@@ -1,6 +1,10 @@
 ---
 title: "github.io 사이트 설정 - 2"
 categories: cse web
+toc: true
+toc_label: "목차"
+toc_icon: "chevron-right"
+tags: [github.io]
 ---
 
 새해를 기념하여 글을 좀 더 열심히 작성하자는 생각에 이 사이트를 다시 방문했다.  
@@ -118,3 +122,19 @@ permalink: /:path/
 > GitHub Pages cannot build sites using unsupported plugins. If you want to use unsupported plugins, generate your site locally and then push your site's static files to GitHub.
 
 라고 한다. 이제 여기 적혀있는 대로 하면 되겠지?
+
+
+### 태그별 정리
+
+몇몇 포스트에 태그를 추가하여 `/tags/` 로 들어가면 태그 별로 정리되어 있는 글 목록을 볼 수는 있다.
+
+```html
+---
+title: "Posts by Tag"
+permalink: /tags/
+layout: tags
+author_profile: true
+---
+```
+
+하지만 마찬가지로 아직도 글의 개수가 많아질 경우에는 pagination 이 안된다는 문제가 남아있다. 이걸 정말 해결하고 싶다면, 태그별로 페이지를 만들어 주면 되긴 하는데, 새로운 태그가 생길 경우에 그 태그에 해당하는 포스트만 모아둔 페이지를 매번 만들어 줘야 한다는 불편함이 존재하게 된다. 아니면 이대로 두는 것도 방법이다 ...

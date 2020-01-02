@@ -55,6 +55,9 @@
 <loc>http://0.0.0.0:4000/math/</loc>
 </url>
 <url>
+<loc>http://0.0.0.0:4000/tags/</loc>
+</url>
+<url>
 <loc>http://0.0.0.0:4000/_pages/cse/</loc>
 </url>
 <url>

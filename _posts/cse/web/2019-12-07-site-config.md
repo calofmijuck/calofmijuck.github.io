@@ -1,6 +1,7 @@
 ---
 title: "github.io 사이트 설정"
 categories: cse web
+tags: [github.io]
 ---
 
 사이트를 처음으로 설정하려는데 뭔가 어렵다.

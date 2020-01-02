@@ -315,7 +315,7 @@
 
 
 
-  3 분 소요
+  4 분 소요
 
 </p>
           
@@ -323,6 +323,20 @@
       
 
       <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-chevron-right"></i> 목차</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#검색-결과가-발생하지-않는-문제">검색 결과가 발생하지 않는 문제</a></li>
+  <li><a href="#상단-메뉴-별-pagination-적용-문제">상단 메뉴 별 pagination 적용 문제</a></li>
+  <li><a href="#category-가-많아지면-url-이-길어지는-문제">Category 가 많아지면 url 이 길어지는 문제</a></li>
+  <li><a href="#todo">TODO</a></li>
+  <li><a href="#추가-내용">추가 내용</a></li>
+  <li><a href="#태그별-정리">태그별 정리</a></li>
+</ul>
+            </nav>
+          </aside>
         
         <p>새해를 기념하여 글을 좀 더 열심히 작성하자는 생각에 이 사이트를 다시 방문했다.<br />
 지난번에 남겨둔 해결해야 할 문제들을 다시 살펴보았고, 해결 할 수 있는 부분은 해결을 시도했다.</p>
@@ -442,12 +456,45 @@ Bootstrap 이라도 이용해서 다시 고칠 생각을 하고 있다.</p>
 
 <p>라고 한다. 이제 여기 적혀있는 대로 하면 되겠지?</p>
 
+<h3 id="태그별-정리">태그별 정리</h3>
+
+<p>몇몇 포스트에 태그를 추가하여 <code class="language-plaintext highlighter-rouge">/tags/</code> 로 들어가면 태그 별로 정리되어 있는 글 목록을 볼 수는 있다.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+title: "Posts by Tag"
+permalink: /tags/
+layout: tags
+author_profile: true
+---
+</code></pre></div></div>
+
+<p>하지만 마찬가지로 아직도 글의 개수가 많아질 경우에는 pagination 이 안된다는 문제가 남아있다. 이걸 정말 해결하고 싶다면, 태그별로 페이지를 만들어 주면 되긴 하는데, 새로운 태그가 생길 경우에 그 태그에 해당하는 포스트만 모아둔 페이지를 매번 만들어 줘야 한다는 불편함이 존재하게 된다. 아니면 이대로 두는 것도 방법이다 …</p>
+
         
       </section>
 
       <footer class="page__meta">
         
         
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#github-io" class="page__taxonomy-item" rel="tag">github.io</a>
+    
+    </span>
+  </p>
+
+
 
 
   

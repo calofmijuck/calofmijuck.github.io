@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2020-01-03T07:58:57+09:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Life Log</title><subtitle>My Blog</subtitle><author><name>이성찬 / Sungchan Yi</name><email>calofmijuck@snu.ac.kr</email></author><entry><title type="html">github.io 사이트 설정 - 2</title><link href="http://0.0.0.0:4000/cse/web/2020-01-02-site-config2/" rel="alternate" type="text/html" title="github.io 사이트 설정 - 2" /><published>2020-01-02T00:00:00+09:00</published><updated>2020-01-02T00:00:00+09:00</updated><id>http://0.0.0.0:4000/cse/web/site-config2</id><content type="html" xml:base="http://0.0.0.0:4000/cse/web/2020-01-02-site-config2/">&lt;p&gt;새해를 기념하여 글을 좀 더 열심히 작성하자는 생각에 이 사이트를 다시 방문했다.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2020-01-03T08:40:53+09:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Life Log</title><subtitle>My Blog</subtitle><author><name>이성찬 / Sungchan Yi</name><email>calofmijuck@snu.ac.kr</email></author><entry><title type="html">github.io 사이트 설정 - 2</title><link href="http://0.0.0.0:4000/cse/web/2020-01-02-site-config2/" rel="alternate" type="text/html" title="github.io 사이트 설정 - 2" /><published>2020-01-02T00:00:00+09:00</published><updated>2020-01-02T00:00:00+09:00</updated><id>http://0.0.0.0:4000/cse/web/site-config2</id><content type="html" xml:base="http://0.0.0.0:4000/cse/web/2020-01-02-site-config2/">&lt;p&gt;새해를 기념하여 글을 좀 더 열심히 작성하자는 생각에 이 사이트를 다시 방문했다.&lt;br /&gt;
 지난번에 남겨둔 해결해야 할 문제들을 다시 살펴보았고, 해결 할 수 있는 부분은 해결을 시도했다.&lt;/p&gt;
 
 &lt;h3 id=&quot;검색-결과가-발생하지-않는-문제&quot;&gt;검색 결과가 발생하지 않는 문제&lt;/h3&gt;
@@ -114,7 +114,21 @@ Bootstrap 이라도 이용해서 다시 고칠 생각을 하고 있다.&lt;/p&gt
   &lt;p&gt;GitHub Pages cannot build sites using unsupported plugins. If you want to use unsupported plugins, generate your site locally and then push your site’s static files to GitHub.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;라고 한다. 이제 여기 적혀있는 대로 하면 되겠지?&lt;/p&gt;</content><author><name>이성찬 / Sungchan Yi</name><email>calofmijuck@snu.ac.kr</email></author><summary type="html">새해를 기념하여 글을 좀 더 열심히 작성하자는 생각에 이 사이트를 다시 방문했다. 지난번에 남겨둔 해결해야 할 문제들을 다시 살펴보았고, 해결 할 수 있는 부분은 해결을 시도했다.</summary></entry><entry><title type="html">자유종(이해조)</title><link href="http://0.0.0.0:4000/life/books/2019-12-10-jayujong/" rel="alternate" type="text/html" title="자유종(이해조)" /><published>2019-12-10T00:00:00+09:00</published><updated>2019-12-10T00:00:00+09:00</updated><id>http://0.0.0.0:4000/life/books/jayujong</id><content type="html" xml:base="http://0.0.0.0:4000/life/books/2019-12-10-jayujong/">&lt;h2 id=&quot;자유종&quot;&gt;자유종&lt;/h2&gt;
+&lt;p&gt;라고 한다. 이제 여기 적혀있는 대로 하면 되겠지?&lt;/p&gt;
+
+&lt;h3 id=&quot;태그별-정리&quot;&gt;태그별 정리&lt;/h3&gt;
+
+&lt;p&gt;몇몇 포스트에 태그를 추가하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/tags/&lt;/code&gt; 로 들어가면 태그 별로 정리되어 있는 글 목록을 볼 수는 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+title: &quot;Posts by Tag&quot;
+permalink: /tags/
+layout: tags
+author_profile: true
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;하지만 마찬가지로 아직도 글의 개수가 많아질 경우에는 pagination 이 안된다는 문제가 남아있다. 이걸 정말 해결하고 싶다면, 태그별로 페이지를 만들어 주면 되긴 하는데, 새로운 태그가 생길 경우에 그 태그에 해당하는 포스트만 모아둔 페이지를 매번 만들어 줘야 한다는 불편함이 존재하게 된다. 아니면 이대로 두는 것도 방법이다 …&lt;/p&gt;</content><author><name>이성찬 / Sungchan Yi</name><email>calofmijuck@snu.ac.kr</email></author><category term="github.io" /><summary type="html">새해를 기념하여 글을 좀 더 열심히 작성하자는 생각에 이 사이트를 다시 방문했다. 지난번에 남겨둔 해결해야 할 문제들을 다시 살펴보았고, 해결 할 수 있는 부분은 해결을 시도했다.</summary></entry><entry><title type="html">자유종(이해조)</title><link href="http://0.0.0.0:4000/life/books/2019-12-10-jayujong/" rel="alternate" type="text/html" title="자유종(이해조)" /><published>2019-12-10T00:00:00+09:00</published><updated>2019-12-10T00:00:00+09:00</updated><id>http://0.0.0.0:4000/life/books/jayujong</id><content type="html" xml:base="http://0.0.0.0:4000/life/books/2019-12-10-jayujong/">&lt;h2 id=&quot;자유종&quot;&gt;자유종&lt;/h2&gt;
 
 &lt;p&gt;제목: 자유종&lt;br /&gt;
 작가: 이해조&lt;br /&gt;
@@ -158,7 +172,7 @@ This is to have succeeded.&lt;br /&gt;
 
 &lt;p&gt;중학생 때 읽은 책에서 발견한 &lt;strong&gt;성공&lt;/strong&gt;에 관한 문구인데, 아직도 누군가 나에게 &lt;em&gt;성공이란 무엇인가?&lt;/em&gt; 라고 물으면 저렇게 대답해준다. &lt;strong&gt;단 한 명이라도, 삶이 편해진다면 그것이 진정한 성공&lt;/strong&gt;이라는 말이다.&lt;/p&gt;
 
-&lt;p&gt;어떻게 하면 진정한 성공을 이뤄낼 수 있을지는… 공부를 더 한 미래의 내가 답을 해줄 것이다.&lt;/p&gt;</content><author><name>이성찬 / Sungchan Yi</name><email>calofmijuck@snu.ac.kr</email></author><summary type="html">자유종</summary></entry><entry><title type="html">github.io 사이트 설정</title><link href="http://0.0.0.0:4000/cse/web/2019-12-07-site-config/" rel="alternate" type="text/html" title="github.io 사이트 설정" /><published>2019-12-07T00:00:00+09:00</published><updated>2019-12-07T00:00:00+09:00</updated><id>http://0.0.0.0:4000/cse/web/site-config</id><content type="html" xml:base="http://0.0.0.0:4000/cse/web/2019-12-07-site-config/">&lt;p&gt;사이트를 처음으로 설정하려는데 뭔가 어렵다.&lt;/p&gt;
+&lt;p&gt;어떻게 하면 진정한 성공을 이뤄낼 수 있을지는… 공부를 더 한 미래의 내가 답을 해줄 것이다.&lt;/p&gt;</content><author><name>이성찬 / Sungchan Yi</name><email>calofmijuck@snu.ac.kr</email></author><category term="literature" /><summary type="html">자유종</summary></entry><entry><title type="html">github.io 사이트 설정</title><link href="http://0.0.0.0:4000/cse/web/2019-12-07-site-config/" rel="alternate" type="text/html" title="github.io 사이트 설정" /><published>2019-12-07T00:00:00+09:00</published><updated>2019-12-07T00:00:00+09:00</updated><id>http://0.0.0.0:4000/cse/web/site-config</id><content type="html" xml:base="http://0.0.0.0:4000/cse/web/2019-12-07-site-config/">&lt;p&gt;사이트를 처음으로 설정하려는데 뭔가 어렵다.&lt;/p&gt;
 
 &lt;p&gt;그리고 뭔가 문제들이 몇 가지 보이는데 해결 방법을 몰라서 7시간 동안 삽질만 했다.&lt;/p&gt;
 
@@ -223,11 +237,11 @@ This is to have succeeded.&lt;br /&gt;
 
 &lt;p&gt;&lt;strong&gt;더 편하게 코딩하자고 하는 삽질인데 그 과정이 무척 고통스러운 건 CSE 특징인 것 같다 …&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;남은 문제들은 미래의 나에게 맡긴다.&lt;/p&gt;</content><author><name>이성찬 / Sungchan Yi</name><email>calofmijuck@snu.ac.kr</email></author><summary type="html">사이트를 처음으로 설정하려는데 뭔가 어렵다.</summary></entry><entry><title type="html">수포자 양성</title><link href="http://0.0.0.0:4000/math/teach/2019-12-06-devil/" rel="alternate" type="text/html" title="수포자 양성" /><published>2019-12-06T11:30:00+09:00</published><updated>2019-12-06T11:30:00+09:00</updated><id>http://0.0.0.0:4000/math/teach/devil</id><content type="html" xml:base="http://0.0.0.0:4000/math/teach/2019-12-06-devil/">&lt;p&gt;자료를 만들다가 나쁜 생각이 들어서 (…) 중1 학생에게 다음과 같은 문제를 선물하기로 했다.&lt;/p&gt;
+&lt;p&gt;남은 문제들은 미래의 나에게 맡긴다.&lt;/p&gt;</content><author><name>이성찬 / Sungchan Yi</name><email>calofmijuck@snu.ac.kr</email></author><category term="github.io" /><summary type="html">사이트를 처음으로 설정하려는데 뭔가 어렵다.</summary></entry><entry><title type="html">수포자 양성</title><link href="http://0.0.0.0:4000/math/teach/2019-12-06-devil/" rel="alternate" type="text/html" title="수포자 양성" /><published>2019-12-06T11:30:00+09:00</published><updated>2019-12-06T11:30:00+09:00</updated><id>http://0.0.0.0:4000/math/teach/devil</id><content type="html" xml:base="http://0.0.0.0:4000/math/teach/2019-12-06-devil/">&lt;p&gt;자료를 만들다가 나쁜 생각이 들어서 (…) 중1 학생에게 다음과 같은 문제를 선물하기로 했다.&lt;/p&gt;
 
 &lt;h3 id=&quot;군론&quot;&gt;군론&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/calofmijuck/calofmijuck.github.io/blob/master/_posts/_math/images/191206-1.png?raw=true&quot; alt=&quot;문제 1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/calofmijuck/calofmijuck.github.io/blob/master/_posts/math/images/191206-1.png?raw=true&quot; alt=&quot;문제 1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;군(group)에 대한 문제이다. 현재 교육과정에서는 이항연산, 항등원, 역원의 내용이 전부 빠져있음에도 출제했다…&lt;/p&gt;
 
@@ -237,12 +251,12 @@ This is to have succeeded.&lt;br /&gt;
 
 &lt;h3 id=&quot;해석학&quot;&gt;해석학&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/calofmijuck/calofmijuck.github.io/blob/master/_posts/_math/images/191206-2.png?raw=true&quot; alt=&quot;문제 2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/calofmijuck/calofmijuck.github.io/blob/master/_posts/math/images/191206-2.png?raw=true&quot; alt=&quot;문제 2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;전에 &lt;script type=&quot;math/tex&quot;&gt;\sqrt{2}&lt;/script&gt; 가 무리수인 것에 대해서 얘기한 적이 있었는데, 내가 &lt;script type=&quot;math/tex&quot;&gt;\sqrt{2}&lt;/script&gt; 의 존재성에 대해 고민해 보라고 한 적이 있다. 물론 실수의 완비성이 필요하긴 한데 &lt;script type=&quot;math/tex&quot;&gt;\sup&lt;/script&gt; 가 대충 존재한다고 하고…&lt;/p&gt;
 
 &lt;h3 id=&quot;선형대수학&quot;&gt;선형대수학&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/calofmijuck/calofmijuck.github.io/blob/master/_posts/_math/images/191206-3.png?raw=true&quot; alt=&quot;문제 3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/calofmijuck/calofmijuck.github.io/blob/master/_posts/math/images/191206-3.png?raw=true&quot; alt=&quot;문제 3&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;내적공간(Inner Product Space)에 관한 문제이다. (A), (B), (D) 는 &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}^n&lt;/script&gt;-공간에서 (C) 로 정의된 dot product 가 만족해야 할 조건들이다. (D) 를 이용해 코시-슈바르츠 부등식을 증명하는 것이 핵심이다.&lt;/p&gt;
 
