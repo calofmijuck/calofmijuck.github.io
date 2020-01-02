@@ -1,13 +1,15 @@
 ---
-layout: home
-author_profile: true
+title: Computer Science and Engineering
+layout: archive
 pagination:
     enabled: true
+    category: cse
     per_page: 5
 ---
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
 {% for post in paginator.posts %}
-  {% include archive-single.html %}
+    {% include archive-single.html %}
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}
@@ -23,9 +25,10 @@ pagination:
                 <em>{{ page }}</em>
 
             {% elsif page == 1 %} 
-                <a href="{{ '/index.html' | prepend: site.baseurl }}">{{ page }}</a>
+                <a href="{{ '/cse/index.html' | prepend: site.baseurl }}">{{ page }}</a>
             {% else %}
-                <a href="{{ site.paginate_path | prepend: '/' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>     
+                <a href="{{ site.paginate_path | prepend: '/cse/' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>     
+                <!-- 페이지 번호를 나타내기 위한 코드. -->
             {% endif %}
         {% endfor %}
 
