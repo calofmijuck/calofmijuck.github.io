@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Welcome to Jekyll! - Life Log</title>
-<meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.">
+<!-- begin _includes/seo.html --><title>github.io 사이트 설정 - Life Log</title>
+<meta name="description" content="사이트를 처음으로 설정하려는데 뭔가 어렵다.">
 
 
   <meta name="author" content="이성찬 / Sungchan Yi">
@@ -19,30 +19,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Life Log">
-<meta property="og:title" content="Welcome to Jekyll!">
-<meta property="og:url" content="http://0.0.0.0:4000/2019-12-06-welcome-to-jekyll/">
+<meta property="og:title" content="github.io 사이트 설정">
+<meta property="og:url" content="http://0.0.0.0:4000/cse/web/2019-12-07-site-config/">
 
 
-  <meta property="og:description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2019-12-06T08:37:45+09:00">
+  <meta property="og:description" content="사이트를 처음으로 설정하려는데 뭔가 어렵다.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2019-12-07T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://0.0.0.0:4000/2019-12-06-welcome-to-jekyll/">
+
+<link rel="canonical" href="http://0.0.0.0:4000/cse/web/2019-12-07-site-config/">
 
 
 
@@ -299,15 +299,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Welcome to Jekyll!">
-    <meta itemprop="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.">
-    <meta itemprop="datePublished" content="December 06, 2019">
+    <meta itemprop="headline" content="github.io 사이트 설정">
+    <meta itemprop="description" content="사이트를 처음으로 설정하려는데 뭔가 어렵다.">
+    <meta itemprop="datePublished" content="December 07, 2019">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Welcome to Jekyll!
+          <h1 id="page-title" class="page__title" itemprop="headline">github.io 사이트 설정
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -324,24 +324,72 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+        <p>사이트를 처음으로 설정하려는데 뭔가 어렵다.</p>
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+<p>그리고 뭔가 문제들이 몇 가지 보이는데 해결 방법을 몰라서 7시간 동안 삽질만 했다.</p>
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+<h3 id="현재-해결해야할-문제들">현재 해결해야할 문제들</h3>
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<ul>
+  <li>Category 별로 포스트를 보여주지만, 포스트의 개수가 많아질 경우 스압 발생.</li>
+  <li>상단 메뉴 선택시 해당 토픽의 최근 포스트를 보여줄 때 포스트 개수 제한 없이 모두 보여주어 스압 발생. (paginator 적용 안되어 있음)</li>
+  <li>이 페이지를 검색하려고 검색에서 <code class="language-plaintext highlighter-rouge">사이트</code> 로 검색했는데 결과가 없음.</li>
+  <li><code class="language-plaintext highlighter-rouge">collection</code> 을 어떻게 사용하는지 잘 모르겠다.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">collection</code> 을 사용해서 (Math/CSE/Life) 로 대분류를 나눠보려 했는데, 나누면 메인 화면의 최근 포스트에 다른 대분류가 잡히지 않음.</li>
+    </ul>
+  </li>
+  <li><del>모바일에서 수식이 지나치게 긴 경우 수식만 튀어나오는 문제</del> (<code class="language-plaintext highlighter-rouge">overflow-x</code> property 로 해결)</li>
+  <li>Preview Images 설정</li>
+</ul>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<p><a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Minimal Mistakes Documentation</a> 은 잘 되어있는 것 같은데, 그냥 내가 theme 을 잘못 고른건가 싶다.</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<h3 id="지원되는-기능">지원되는 기능</h3>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<p>일단 마크다운이기 때문에 기본적으로 될 것들은 다 되고… 그냥 심심하니 몇개 적어본다.</p>
 
+<ol>
+  <li>
+    <p>Syntax Highlighting</p>
+
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include &lt;cstdio&gt;
+</span> <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+ <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+     <span class="n">printf</span><span class="p">(</span><span class="s">"Hello, github.io!"</span><span class="p">);</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">print</span><span class="p">(</span><span class="s">"Hello, github.io!"</span><span class="p">);</span>
+</code></pre></div>    </div>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello, github.io!"</span><span class="o">);</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>수식 입력</p>
+
+    <script type="math/tex; mode=display">\vec{\nabla} \times \vec{F} =
+         \left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z} \right) \mathbf{i}
+         + \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right) \mathbf{j}
+         + \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \mathbf{k}</script>
+  </li>
+</ol>
+
+<p>깔끔해서 마음이 편안해진다.</p>
+
+<p>정리하자면 전체적으로 괜찮은 것 같긴 한데, <strong>스압</strong>이 가장 걱정된다. 느려지는 건 정말 원하지 않는다. (+ 모바일 데이터 폭탄 <del>무제한 쓰세요</del>)</p>
+
+<p>스압만 해결하면 적당히 쓸만한 사이트가 되지 않을까 싶다. 스압을 해결하려면 결국엔 이 테마에서 정의된 <code class="language-plaintext highlighter-rouge">layout</code> 들을 분석해야 할 것 같은데 Jekyll 로 되어있으니 Documentation 도 읽고 등등… 삽질 좀 더 해야 하나보다.</p>
+
+<p><strong>더 편하게 코딩하자고 하는 삽질인데 그 과정이 무척 고통스러운 건 CSE 특징인 것 같다 …</strong></p>
+
+<p>남은 문제들은 미래의 나에게 맡긴다.</p>
 
         
       </section>
@@ -364,18 +412,18 @@
     
       
       
-      <a href="/categories/#jekyll" class="page__taxonomy-item" rel="tag">jekyll</a><span class="sep">, </span>
+      <a href="/categories/#cse" class="page__taxonomy-item" rel="tag">cse</a><span class="sep">, </span>
     
       
       
-      <a href="/categories/#update" class="page__taxonomy-item" rel="tag">update</a>
+      <a href="/categories/#web" class="page__taxonomy-item" rel="tag">web</a>
     
     </span>
   </p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2019-12-06T08:37:45+09:00">December 06, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2019-12-07T00:00:00+09:00">December 07, 2019</time></p>
         
       </footer>
 
@@ -384,22 +432,22 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Welcome+to+Jekyll%21%20http%3A%2F%2F0.0.0.0%3A4000%2F2019-12-06-welcome-to-jekyll%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=github.io+%EC%82%AC%EC%9D%B4%ED%8A%B8+%EC%84%A4%EC%A0%95%20http%3A%2F%2F0.0.0.0%3A4000%2Fcse%2Fweb%2F2019-12-07-site-config%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F0.0.0.0%3A4000%2F2019-12-06-welcome-to-jekyll%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F0.0.0.0%3A4000%2Fcse%2Fweb%2F2019-12-07-site-config%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2F0.0.0.0%3A4000%2F2019-12-06-welcome-to-jekyll%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2F0.0.0.0%3A4000%2Fcse%2Fweb%2F2019-12-07-site-config%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/life/military/2019-11-14-military/" class="pagination--pager" title="산업기능요원 편입
+      <a href="/math/teach/2019-12-06-devil/" class="pagination--pager" title="수포자 양성
 ">이전</a>
     
     
-      <a href="/math/teach/2019-12-06-devil/" class="pagination--pager" title="수포자 양성
+      <a href="/life/books/2019-12-10-jayujong/" class="pagination--pager" title="자유종(이해조)
 ">다음</a>
     
   </nav>
@@ -509,7 +557,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/cse/web/2019-12-07-site-config/" rel="permalink">github.io 사이트 설정
+        <a href="/math/teach/2019-12-06-devil/" rel="permalink">수포자 양성
 </a>
       
     </h2>
@@ -519,11 +567,11 @@
 
 
 
-  1 분 소요
+  최대 1 분 소요
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">사이트를 처음으로 설정하려는데 뭔가 어렵다.
+    <p class="archive__item-excerpt" itemprop="description">자료를 만들다가 나쁜 생각이 들어서 (…) 중1 학생에게 다음과 같은 문제를 선물하기로 했다.
 
 </p>
   </article>
@@ -547,7 +595,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/math/teach/2019-12-06-devil/" rel="permalink">수포자 양성
+        <a href="/2019-12-06-welcome-to-jekyll/" rel="permalink">Welcome to Jekyll!
 </a>
       
     </h2>
@@ -557,13 +605,11 @@
 
 
 
-  최대 1 분 소요
+  1 분 소요
 
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">자료를 만들다가 나쁜 생각이 들어서 (…) 중1 학생에게 다음과 같은 문제를 선물하기로 했다.
-
-</p>
+    <p class="archive__item-excerpt" itemprop="description">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...</p>
   </article>
 </div>
 

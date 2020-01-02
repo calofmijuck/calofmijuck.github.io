@@ -1,0 +1,743 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.17.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>github.io 사이트 설정 - 2 - Life Log</title>
+<meta name="description" content="새해를 기념하여 글을 좀 더 열심히 작성하자는 생각에 이 사이트를 다시 방문했다.지난번에 남겨둔 해결해야 할 문제들을 다시 살펴보았고, 해결 할 수 있는 부분은 해결을 시도했다.">
+
+
+  <meta name="author" content="이성찬 / Sungchan Yi">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Life Log">
+<meta property="og:title" content="github.io 사이트 설정 - 2">
+<meta property="og:url" content="http://0.0.0.0:4000/cse/web/2020-01-02-site-config2/">
+
+
+  <meta property="og:description" content="새해를 기념하여 글을 좀 더 열심히 작성하자는 생각에 이 사이트를 다시 방문했다.지난번에 남겨둔 해결해야 할 문제들을 다시 살펴보았고, 해결 할 수 있는 부분은 해결을 시도했다.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-01-02T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://0.0.0.0:4000/cse/web/2020-01-02-site-config2/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Sungchan Yi",
+      "url": "http://0.0.0.0:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Life Log Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG"></script>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700|Open+Sans:400,700&display=swap&subset=korean"
+    rel="stylesheet">
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="icon" href="https://math.zxcvber.com/images/page-icon.png">
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/page-icon.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          Life Log
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/math/" >Math</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cse/" >CSE</a>
+            </li><li class="masthead__menu-item">
+              <a href="/life/" >Life</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/" >Category</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://calofmijuck.github.io/about/" >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="https://avatars3.githubusercontent.com/u/38686321?s=460&v=4" alt="이성찬 / Sungchan Yi" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">이성찬 / Sungchan Yi</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>SNUCSE17 / Hi! Nice to meet you!</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://zxcvber.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://facebook.com/sungchan1012" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+          
+        
+          
+            <li><a href="https://github.com/calofmijuck" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="https://instagram.com/calofmijuck" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:calofmijuck@snu.ac.kr">
+            <meta itemprop="email" content="calofmijuck@snu.ac.kr" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> 이메일
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="github.io 사이트 설정 - 2">
+    <meta itemprop="description" content="새해를 기념하여 글을 좀 더 열심히 작성하자는 생각에 이 사이트를 다시 방문했다.지난번에 남겨둔 해결해야 할 문제들을 다시 살펴보았고, 해결 할 수 있는 부분은 해결을 시도했다.">
+    <meta itemprop="datePublished" content="January 02, 2020">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">github.io 사이트 설정 - 2
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 분 소요
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>새해를 기념하여 글을 좀 더 열심히 작성하자는 생각에 이 사이트를 다시 방문했다.<br />
+지난번에 남겨둔 해결해야 할 문제들을 다시 살펴보았고, 해결 할 수 있는 부분은 해결을 시도했다.</p>
+
+<h3 id="검색-결과가-발생하지-않는-문제">검색 결과가 발생하지 않는 문제</h3>
+<ul>
+  <li>이 페이지를 검색하려고 검색에서 <code class="language-plaintext highlighter-rouge">사이트</code> 로 검색했는데 결과가 없음.</li>
+</ul>
+
+<p>왠지 모르겠는데 다시 해보니까 아무 문제 없이 된다.
+그런데 footer 쪽에 있는 related posts 에 들어있는 텍스트도 (즉, 해당 포스트에는 직접적으로 포함되지 않는 내용) 감지 되어 검색 결과에 같이 등장한다. 이게 뭐지?</p>
+
+<h3 id="상단-메뉴-별-pagination-적용-문제">상단 메뉴 별 pagination 적용 문제</h3>
+<ul>
+  <li>상단 메뉴 선택시 해당 토픽의 최근 포스트를 보여줄 때 포스트 개수 제한 없이 모두 보여주어 스압 발생. (paginator 적용 안되어 있음)</li>
+</ul>
+
+<p>사용하는 <code class="language-plaintext highlighter-rouge">plugin</code> 중 <code class="language-plaintext highlighter-rouge">jekyll-paginate</code> 를 더 이상 사용하지 않기로 하고, <a href="https://github.com/sverrirs/jekyll-paginate-v2"><code class="language-plaintext highlighter-rouge">jekyll-paginate-v2</code></a> 를 사용하기로 했다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">_config.yml</code> 에 다음과 같은 내용을 추가했다.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">jekyll-paginate-v2</span>
+
+<span class="na">pagination</span><span class="pi">:</span>
+    <span class="na">enabled</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">per_page</span><span class="pi">:</span> <span class="m">5</span>     <span class="c1"># 5개씩 보여주기</span>
+    <span class="na">limit</span><span class="pi">:</span> <span class="m">0</span>
+    <span class="na">sort_field</span><span class="pi">:</span> <span class="s2">"</span><span class="s">date"</span>
+    <span class="na">sort_reverse</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">title</span><span class="pi">:</span> <span class="s1">'</span><span class="s">:title'</span>     <span class="c1"># 타이틀 형식</span>
+</code></pre></div></div>
+
+<p>그리고 <code class="language-plaintext highlighter-rouge">Gemfile</code> 에는 다음 내용을 추가했다.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
+    <span class="n">gem</span> <span class="s2">"jekyll-paginate-v2"</span>
+</code></pre></div></div>
+
+<p>당연히 <code class="language-plaintext highlighter-rouge">bundle install</code> 명령어를 한 번 입력해 줘야 하고, <code class="language-plaintext highlighter-rouge">index.html</code> 을 다음과 같이 변경했다.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: home
+author_profile: true
+pagination:
+    enabled: true
+    per_page: 5
+---
+
+
+{% for post in paginator.posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% if paginator.total_pages &gt; 1 %}
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pagination"</span><span class="nt">&gt;</span>
+        {% if paginator.previous_page %}
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"</span><span class="nt">&gt;</span><span class="ni">&amp;laquo;</span> Prev<span class="nt">&lt;/a&gt;</span>
+        {% else %}
+            <span class="nt">&lt;span&gt;</span><span class="ni">&amp;laquo;</span> Prev<span class="nt">&lt;/span&gt;</span>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+                <span class="nt">&lt;em&gt;</span>{{ page }}<span class="nt">&lt;/em&gt;</span>
+
+            {% elsif page == 1 %} 
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ '/index.html' | prepend: site.baseurl }}"</span><span class="nt">&gt;</span>{{ page }}<span class="nt">&lt;/a&gt;</span>
+            {% else %}
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ site.paginate_path | prepend: '/' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"</span><span class="nt">&gt;</span>{{ page }}<span class="nt">&lt;/a&gt;</span>     
+            {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"</span><span class="nt">&gt;</span>Next <span class="ni">&amp;raquo;</span><span class="nt">&lt;/a&gt;</span>
+        {% else %}
+            <span class="nt">&lt;span&gt;</span>Next <span class="ni">&amp;raquo;</span><span class="nt">&lt;/span&gt;</span>
+        {% endif %}
+    <span class="nt">&lt;/div&gt;</span>
+{% endif %}
+
+</code></pre></div></div>
+
+<p>일단 당장은 디자인이 좀 구리다 (…)<br />
+Bootstrap 이라도 이용해서 다시 고칠 생각을 하고 있다.</p>
+
+<p>위와 같은 방식을 이용해서 category 별로 저 부분을 다 작성해서 넣어주면 pagination 이 잘 될 것이라고 기대하고 있다.</p>
+
+<p>또 다른 문제를 하나 발견했는데…</p>
+
+<h3 id="category-가-많아지면-url-이-길어지는-문제">Category 가 많아지면 url 이 길어지는 문제</h3>
+<p>인지하지 못하고 있었는데, category 를 막 집어넣었더니 카테고리들이 <code class="language-plaintext highlighter-rouge">/</code> 로 분리되어 <strong>전부</strong> url 에 포함되는 것을 확인할 수 있었다. 일단은 임시 방편으로, permalink 를 <code class="language-plaintext highlighter-rouge">:path</code> 로만 해두었다.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">permalink</span><span class="pi">:</span> <span class="s">/:path/</span>
+</code></pre></div></div>
+
+<p>원하는 것은, <code class="language-plaintext highlighter-rouge">/대분류/:title/</code> 인데, collection 을 사용하면 될 것 같지만, 아직도 collection 은 잘 모르겠다.</p>
+
+<p>아니면 태그를 잘 활용하는 것도 방법이 되지 않을까 고민하고 있다.</p>
+
+<h3 id="todo">TODO</h3>
+
+<ul>
+  <li>상단의 Category 탭에서는 paginator 를 어떻게 적용해야 할지 전혀 모르겠다. 차라리 tag 를 도입해서 tag 가 같은 문서 끼리만 볼 수 있도록 구현을 하는 것이 방법일 것 같다.</li>
+  <li><code class="language-plaintext highlighter-rouge">_includes</code>, <code class="language-plaintext highlighter-rouge">_layouts</code> 에 뭐가 굉장히 많다. <code class="language-plaintext highlighter-rouge">liquid</code> syntax 를 익히고, template 들을 분석해서 사이트를 보다 더 다채롭게 사용할 수 있으면 좋겠다.</li>
+</ul>
+
+<h3 id="추가-내용">추가 내용</h3>
+
+<p>변경 사항들을 repo 에 모두 push 했는데, pagination 이 작동하지 않는다. 전체 recent post, CSE 카테고리 recent post 가 전부 보이지 않는다.</p>
+
+<p>일단 의도대로 페이지가 동작하지 않는 이유는 unsupported plugin 을 사용했기 때문이다. Supported plugin 들의 목록은 <a href="https://pages.github.com/versions/">여기</a> 에서 확인할 수 있었다. <code class="language-plaintext highlighter-rouge">jekyll-paginate-v2</code> 는 목록에 없다. 그리고 <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll#plugins">Github Pages Documentation</a> 을 확인해 보니</p>
+
+<blockquote>
+  <p>GitHub Pages cannot build sites using unsupported plugins. If you want to use unsupported plugins, generate your site locally and then push your site’s static files to GitHub.</p>
+</blockquote>
+
+<p>라고 한다. 이제 여기 적혀있는 대로 하면 되겠지?</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#cse" class="page__taxonomy-item" rel="tag">cse</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#web" class="page__taxonomy-item" rel="tag">web</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-01-02T00:00:00+09:00">January 02, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=github.io+%EC%82%AC%EC%9D%B4%ED%8A%B8+%EC%84%A4%EC%A0%95+-+2%20http%3A%2F%2F0.0.0.0%3A4000%2Fcse%2Fweb%2F2020-01-02-site-config2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F0.0.0.0%3A4000%2Fcse%2Fweb%2F2020-01-02-site-config2%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2F0.0.0.0%3A4000%2Fcse%2Fweb%2F2020-01-02-site-config2%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/life/books/2019-12-10-jayujong/" class="pagination--pager" title="자유종(이해조)
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">관련 포스트</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/page-icon.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/life/books/2019-12-10-jayujong/" rel="permalink">자유종(이해조)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">자유종
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/page-icon.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/cse/web/2019-12-07-site-config/" rel="permalink">github.io 사이트 설정
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">사이트를 처음으로 설정하려는데 뭔가 어렵다.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/page-icon.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/math/teach/2019-12-06-devil/" rel="permalink">수포자 양성
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  최대 1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">자료를 만들다가 나쁜 생각이 들어서 (…) 중1 학생에게 다음과 같은 문제를 선물하기로 했다.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/page-icon.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2019-12-06-welcome-to-jekyll/" rel="permalink">Welcome to Jekyll!
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 분 소요
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    <li><strong>팔로우:</strong></li>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <li><a
+        href="/feed.xml"><i
+          class="fas fa-fw fa-rss-square" aria-hidden="true"></i>
+        피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Sungchan Yi.</div>
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
