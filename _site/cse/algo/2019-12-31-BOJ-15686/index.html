@@ -390,6 +390,9 @@
 
 <p>시간 복잡도를 계산해 보자.</p>
 
+<p><code class="language-plaintext highlighter-rouge">for</code> 문은 최대 <script type="math/tex">2^{13}</script> 회 수행된다. <code class="language-plaintext highlighter-rouge">bitCount</code> 는 상수 시간이므로 무시하고, <script type="math/tex">{13 \choose M}</script> 번만큼 <code class="language-plaintext highlighter-rouge">calculate</code> 가 실행된다.<br />
+<code class="language-plaintext highlighter-rouge">calculate</code> 의 시간 복잡도는 <script type="math/tex">\mathcal{O}(2N\cdot 13)</script> 이므로 총 <script type="math/tex">\mathcal{O}(N\cdot {13 \choose M})</script> 이다.</p>
+
         
       </section>
 
