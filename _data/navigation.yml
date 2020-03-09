@@ -3,7 +3,7 @@ main:
   # - title: "Quick-Start Guide"
     # url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Jokbo"
-    url: /jokbo/
+    url: /
   - title: "Math"
     url: /math/
   - title: "CSE"
