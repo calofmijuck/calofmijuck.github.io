@@ -1,4 +1,4 @@
-<!-- ---
+---
 title: Computer Science and Engineering
 layout: archive
 permalink: /cse/
@@ -11,4 +11,5 @@ classes: wide
 {% for post in site.categories.cse %}
     {% include archive-single.html %}
 {% endfor %}
- -->
+
+{% include paginator.html %}
